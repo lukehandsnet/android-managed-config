@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrictions xmlns:android="http://schemas.android.com/apk/res/android">
+    <restriction
+        android:key="server_url"
+        android:title="Server URL"
+        android:description="Base URL for the application server"
+        android:defaultValue=""
+        android:restrictionType="string" />
+        
+    <restriction
+        android:key="enable_feature_x"
+        android:title="Enable Feature X"
+        android:description="Toggle specific feature functionality"
+        android:defaultValue="false"
+        android:restrictionType="bool" />
+        
+    <restriction
+        android:key="max_items"
+        android:title="Maximum Items"
+        android:description="Maximum number of items allowed"
+        android:defaultValue="10"
+        android:restrictionType="integer" />
+        
+    <restriction
+        android:key="api_key"
+        android:title="API Key"
+        android:description="API key for services"
+        android:defaultValue=""
+        android:restrictionType="string" />
+</restrictions>
