@@ -27,4 +27,39 @@
         android:description="API key for services"
         android:defaultValue=""
         android:restrictionType="string" />
+        
+    <restriction
+        android:key="debug_mode"
+        android:title="Debug Mode"
+        android:description="Enable detailed logging and diagnostic information"
+        android:defaultValue="false"
+        android:restrictionType="bool" />
+        
+    <restriction
+        android:key="sync_interval"
+        android:title="Sync Interval"
+        android:description="Frequency of data synchronization (in minutes)"
+        android:defaultValue="30"
+        android:restrictionType="integer" />
+        
+    <restriction
+        android:key="theme_mode"
+        android:title="Theme Mode"
+        android:description="Application color theme"
+        android:defaultValue="system"
+        android:restrictionType="string" />
+        
+    <restriction
+        android:key="max_cache_size"
+        android:title="Maximum Cache Size"
+        android:description="Maximum local cache size in MB"
+        android:defaultValue="100"
+        android:restrictionType="integer" />
+        
+    <restriction
+        android:key="telemetry_enabled"
+        android:title="Telemetry"
+        android:description="Allow anonymous usage statistics collection"
+        android:defaultValue="true"
+        android:restrictionType="bool" />
 </restrictions>
