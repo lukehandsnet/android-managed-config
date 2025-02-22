@@ -18,9 +18,41 @@ android {
     }
 
     buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+            debuggable true
+        }
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+
+    // Product flavors for different environments
+    flavorDimensions "environment"
+    productFlavors {
+        dev {
+            dimension "environment"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            // Add dev-specific configurations
+            buildConfigField "String", "API_BASE_URL", "\"https://dev-api.example.com\""
+        }
+        staging {
+            dimension "environment"
+            applicationIdSuffix ".staging"
+            versionNameSuffix "-staging"
+            // Add staging-specific configurations
+            buildConfigField "String", "API_BASE_URL", "\"https://staging-api.example.com\""
+        }
+        prod {
+            dimension "environment"
+            // Production uses the base applicationId
+            // Add prod-specific configurations
+            buildConfigField "String", "API_BASE_URL", "\"https://api.example.com\""
         }
     }
     
