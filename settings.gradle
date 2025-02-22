@@ -1,4 +1,7 @@
-pluginManagement {
+rootProject.name = "ManagedConfig"
+include ':app'
+
+buildscript {
     repositories {
         google()
         mavenCentral()
@@ -6,13 +9,9 @@ pluginManagement {
     }
 }
 
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+allprojects {
     repositories {
         google()
         mavenCentral()
     }
 }
-
-rootProject.name = "ManagedConfig"
-include ':app'
