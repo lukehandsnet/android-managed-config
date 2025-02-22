@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.managedconfig'
+    namespace 'net.lukehands.managedappconfigutil'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.managedconfig"
+        applicationId "net.lukehands.managedappconfigutil"
         minSdk 24
         targetSdk 34
         versionCode 1
