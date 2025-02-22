@@ -1,7 +1,4 @@
-rootProject.name = "ManagedConfig"
-include ':app'
-
-buildscript {
+pluginManagement {
     repositories {
         google()
         mavenCentral()
@@ -9,9 +6,5 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+rootProject.name = "ManagedConfig"
+include ':app'
